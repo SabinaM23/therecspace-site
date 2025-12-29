@@ -1,0 +1,37 @@
+---
+layout: null
+---
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <h1 class="site-title">TheRecSpace</h1>
+    <a href="/" class="logo-link">
+      <img src="/assets/logo.png" alt="Site logo" class="site-logo">
+    </a>
+  </header>
+
+  <main>
+    <div class="grid">
+      {% for post in collections.post %}
+        <div class="card">
+          <a href="{{ post.url }}">
+            <strong>{{ post.data.title }}</strong><br>
+            <span>{{ post.data.author }}</span>
+          </a>
+        </div>
+    {% endfor %}
+    </div>
+  </main>
+
+
+
+</body>
+</html>
